@@ -69,7 +69,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
 
     @IBAction func datePickerClicked(_ sender: UIButton) {
         // example of date picker with min and max values set (as a week in past and week in future from today)
-        let datePicker = ActionSheetDatePicker(title: "Date within 2 weeks - (Inline):",
+        let datePicker = ActionSheetDatePicker(title: "Date within 2 weeks - (Compact):",
                                                datePickerMode: UIDatePicker.Mode.date,
                                                selectedDate: Date(),
                                                doneBlock: { picker, date, origin in
@@ -86,7 +86,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         datePicker?.minimumDate = Date(timeInterval: -secondsInWeek, since: Date())
         datePicker?.maximumDate = Date(timeInterval: secondsInWeek, since: Date())
         if #available(iOS 14.0, *) {
-            datePicker?.datePickerStyle = .inline
+            datePicker?.datePickerStyle = .compact
         }
 
         datePicker?.show()

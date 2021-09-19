@@ -296,7 +296,7 @@
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140000 // Xcode 12 and iOS 14, or greater
     if (@available(iOS 14.0, *)) {
         if (_datePickerStyle == UIDatePickerStyleCompact) {
-            height = 90.0;
+            height = 250.0;
         } else if (_datePickerStyle == UIDatePickerStyleInline) {
             switch (_datePickerMode) {
                 case UIDatePickerModeDate:
